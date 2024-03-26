@@ -55,7 +55,8 @@ const PlanSection = () => {
 
 					{/* pricing cards starts here */}
 					<div className="grid grid-cols-3 gap-[19px]">
-						<div className="p-8 rounded-[20px] bg-white">
+						{/* first card */}
+						<div className="p-8 rounded-[20px] bg-white price-card-shadow">
 							<Image
 								src="assets/images/cross-green.svg"
 								alt="green cross"
@@ -243,6 +244,432 @@ const PlanSection = () => {
 												role="menuitem"
 											>
 												Family
+											</a>
+										</div>
+									</div>
+								)}
+							</div>
+							<button className="button-primary !w-[323px]">
+								Choose Premier Plus
+							</button>
+						</div>
+
+						{/* second card */}
+						<div className="p-8 rounded-[20px] bg-white price-card-shadow">
+							<Image
+								src="assets/images/cross-yellow.svg"
+								alt="green cross"
+								width={32}
+								height={32}
+							/>
+							<h5 className="text-[20px] font-semibold leading-[32px] font-primary text-[#1F1E20] pt-4 pb-1 ">
+								Diamond Plus
+							</h5>
+							<p className="text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20]">
+								Monthly share
+							</p>
+							<div className="border-[1px] border-[#F3F3F3] my-5"></div>
+							<div className="flex items-center gap-[10px]">
+								<h5 className="text-[16px] leading[25.6px] font-medium font-primary text-[#1F1E20]">
+									Starting
+								</h5>
+								<div className="relative">
+									<Image
+										src="/assets/images/icons/notice.svg"
+										alt="notice image"
+										width={20}
+										height={20}
+										className="cursor-pointer"
+										onMouseEnter={() =>
+											setIsTooltipVisible(true)
+										}
+										onMouseLeave={() =>
+											setIsTooltipVisible(false)
+										}
+									/>
+									{isTooltipVisible && (
+										<div className="absolute top-0 left-[30px]  bg-white p-5 rounded-[8px] w-[323px]">
+											<h5 className="text-[14px] font-normal font-primary leading-[22.4px] text-[#1F1E20]">
+												The monthly contribution is the
+												amount that you will be charged
+												every month to maintain your
+												membership.
+											</h5>
+										</div>
+									)}
+								</div>
+							</div>
+							<h1 className="pt-[2px] pb-5">
+								$175{' '}
+								<span className='text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20]"'>
+									/month
+								</span>
+							</h1>
+							<h5 className="text-[20px] font-semibold leading-[32px] font-primary text-[#1F1E20] pt-4 pb-1 ">
+								Benefits
+							</h5>
+							<div className="flex items-center gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/check.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									Premier Benefits Included
+								</p>
+							</div>
+							<div className="flex items-center gap-[17px] mb-4">
+								<div className="border-[1px] border-[#F3F3F3] w-full"></div>
+								<p className="text-[14px] font-semibold leading-[24px]">
+									And
+								</p>
+								<div className="border-[1px] border-[#F3F3F3] w-full"></div>
+							</div>
+							<div className="flex items-center gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/check.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									$10,000 Personal Responsibility (PR)
+								</p>
+							</div>
+							<div className="flex gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/check.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									For families: Maximum two PR per calendar
+									year
+								</p>
+							</div>
+							<div className="border-[1px] border-[#F3F3F3] w-full mb-5 mt-[25]"></div>
+							<h5 className="text-[20px] font-semibold leading-[32px] font-primary text-[#1F1E20] pb-[10px]">
+								Limits
+							</h5>
+							<div className="flex items-center gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/spark-yellow.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									Membership Limit: $50,000 per incident
+								</p>
+							</div>
+							<div className="flex items-center gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/spark-yellow.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									Maximum Sharing Benefits Eligible
+								</p>
+							</div>
+							<div className="flex items-center gap-[10px] pb-[36px]">
+								<Image
+									src="assets/images/icons/spark-yellow.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									Maximum Lifetime Benefit: $2,000,000
+								</p>
+							</div>
+
+							<p className="text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] pb-6">
+								Discounted Physician Office Visits including Lab
+								and X-Ray ran through our PPO networks.
+							</p>
+
+							{/* dropdown items */}
+							<div className="relative inline-block text-left mb-6">
+								<button
+									type="button"
+									className="w-[323px] text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
+									onClick={toggleDropdown}
+								>
+									1 Member
+									<Image
+										src={dropdownIconSrc}
+										alt="icon dropdown"
+										width={12}
+										height={6}
+									/>
+								</button>
+
+								{isDropdownOpen && (
+									<div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+										<div
+											className="py-1"
+											role="menu"
+											aria-orientation="vertical"
+											aria-labelledby="options-menu"
+										>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												1 Member
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												2 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												3-5 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												6 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												7 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												8 Members
+											</a>
+										</div>
+									</div>
+								)}
+							</div>
+							<button className="button-primary !w-[323px]">
+								Choose Premier Plus
+							</button>
+						</div>
+
+						{/* Third card */}
+						<div className="p-8 rounded-[20px] bg-white price-card-shadow">
+							<Image
+								src="assets/images/cross-blue.svg"
+								alt="green cross"
+								width={32}
+								height={32}
+							/>
+							<h5 className="text-[20px] font-semibold leading-[32px] font-primary text-[#1F1E20] pt-4 pb-1 ">
+								Diamond 5 Plus
+							</h5>
+							<p className="text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20]">
+								Monthly share
+							</p>
+							<div className="border-[1px] border-[#F3F3F3] my-5"></div>
+							<div className="flex items-center gap-[10px]">
+								<h5 className="text-[16px] leading[25.6px] font-medium font-primary text-[#1F1E20]">
+									Starting
+								</h5>
+								<div className="relative">
+									<Image
+										src="/assets/images/icons/notice.svg"
+										alt="notice image"
+										width={20}
+										height={20}
+										className="cursor-pointer"
+										onMouseEnter={() =>
+											setIsTooltipVisible(true)
+										}
+										onMouseLeave={() =>
+											setIsTooltipVisible(false)
+										}
+									/>
+									{isTooltipVisible && (
+										<div className="absolute top-0 left-[30px]  bg-white p-5 rounded-[8px] w-[323px]">
+											<h5 className="text-[14px] font-normal font-primary leading-[22.4px] text-[#1F1E20]">
+												The monthly contribution is the
+												amount that you will be charged
+												every month to maintain your
+												membership.
+											</h5>
+										</div>
+									)}
+								</div>
+							</div>
+							<h1 className="pt-[2px] pb-5">
+								$275{' '}
+								<span className='text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20]"'>
+									/month
+								</span>
+							</h1>
+							<h5 className="text-[20px] font-semibold leading-[32px] font-primary text-[#1F1E20] pt-4 pb-1 ">
+								Benefits
+							</h5>
+							<div className="flex items-center gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/check.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									Premier Benefits Included
+								</p>
+							</div>
+							<div className="flex items-center gap-[17px] mb-4">
+								<div className="border-[1px] border-[#F3F3F3] w-full"></div>
+								<p className="text-[14px] font-semibold leading-[24px]">
+									And
+								</p>
+								<div className="border-[1px] border-[#F3F3F3] w-full"></div>
+							</div>
+							<div className="flex items-center gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/check.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									$10,000 Personal Responsibility (PR)
+								</p>
+							</div>
+							<div className="flex gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/check.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									For families: Maximum two PR per calendar
+									year
+								</p>
+							</div>
+							<div className="border-[1px] border-[#F3F3F3] w-full mb-5 mt-[25]"></div>
+							<h5 className="text-[20px] font-semibold leading-[32px] font-primary text-[#1F1E20] pb-[10px]">
+								Limits
+							</h5>
+							<div className="flex items-center gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/spark-blue.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									Membership Limit: $50,000 per incident
+								</p>
+							</div>
+							<div className="flex items-center gap-[10px] pb-4">
+								<Image
+									src="assets/images/icons/spark-blue.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									Maximum Sharing Benefits Eligible
+								</p>
+							</div>
+							<div className="flex items-center gap-[10px] pb-[36px]">
+								<Image
+									src="assets/images/icons/spark-blue.svg"
+									alt="check icon"
+									width={20}
+									height={20}
+								/>
+								<p className="text-[14px] font-primary font-medium leading-[24px] text-[#1F1E20]">
+									Maximum Lifetime Benefit: $2,000,000
+								</p>
+							</div>
+
+							<p className="text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] pb-6">
+								Discounted Physician Office Visits including Lab
+								and X-Ray ran through our PPO networks.
+							</p>
+
+							{/* dropdown items */}
+							<div className="relative inline-block text-left mb-6">
+								<button
+									type="button"
+									className="w-[323px] text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
+									onClick={toggleDropdown}
+								>
+									1 Member
+									<Image
+										src={dropdownIconSrc}
+										alt="icon dropdown"
+										width={12}
+										height={6}
+									/>
+								</button>
+
+								{isDropdownOpen && (
+									<div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+										<div
+											className="py-1"
+											role="menu"
+											aria-orientation="vertical"
+											aria-labelledby="options-menu"
+										>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												1 Member
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												2 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												3-5 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												6 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												7 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												8 Members
 											</a>
 										</div>
 									</div>
