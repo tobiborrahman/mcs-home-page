@@ -1,0 +1,18 @@
+.mobileMenu {
+	position: absolute;
+	top: 100px; /* Adjust this value based on your navbar height */
+	left: 0;
+	width: 100%;
+	background-color: #f0f0f0; /* Change this to your desired background color */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transform: translateY(-100%);
+	transition: transform 0.3s ease-in-out;
+}
+
+.mobileMenu.open {
+	transform: translateY(0);
+}
+
+.mobileMenu ul {
+	padding: 1rem;
+}

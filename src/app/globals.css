@@ -133,6 +133,10 @@
 		}
 	}
 
+	.transform-transition {
+		transition: transform 2s ease-in-out;
+	}
+
 	button,
 	li,
 	ol,
