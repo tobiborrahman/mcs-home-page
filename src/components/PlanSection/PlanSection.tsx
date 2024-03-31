@@ -21,17 +21,17 @@ const PlanSection = () => {
 	};
 
 	return (
-		<div className="py-[99px]">
+		<div className="py-[99px] sm:pt-0 md:pt-0 sm:mt-[100px] md:mt-[100px]">
 			<div className="custom-container">
 				<div>
 					<div className="text-center">
 						<h6 className="text-primary">Our Plans</h6>
-						<h3 className="pt-5 pb-6 sm:hidden">
+						<h3 className="pt-5 pb-6 sm:hidden md:hidden">
 							Our plans offer tailor-made medical cost-sharing to{' '}
 							<br />
 							individuals, families, and businesses.
 						</h3>
-						<h3 className="pt-5 pb-6 hidden sm:block">
+						<h3 className="pt-5 pb-6 hidden sm:block md:block">
 							Our plans offer tailor-made medical cost-sharing to
 							individuals, families, and businesses.
 						</h3>
@@ -54,7 +54,7 @@ const PlanSection = () => {
 					</div>
 
 					{/* pricing cards starts here */}
-					<div className="grid grid-cols-3 gap-[19px]">
+					<div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 gap-[19px] sm:mt-10 md:mt-12">
 						{/* first card */}
 						<div className="p-8 rounded-[20px] bg-white price-card-shadow">
 							<Image
@@ -208,10 +208,10 @@ const PlanSection = () => {
 							</p>
 
 							{/* dropdown items */}
-							<div className="relative inline-block text-left mb-6">
+							<div className="relative w-full inline-block text-left mb-6">
 								<button
 									type="button"
-									className="w-[323px] text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
+									className="w-full text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
 									onClick={toggleDropdown}
 								>
 									Single
@@ -249,7 +249,8 @@ const PlanSection = () => {
 									</div>
 								)}
 							</div>
-							<button className="button-primary !w-[323px]">
+
+							<button className="bg-primary w-full h-[56px] rounded-[8px] text-[16px] font-primary font-medium text-[#FFFFFF] leading-[25.6px] text-center">
 								Choose Premier Plus
 							</button>
 						</div>
@@ -393,13 +394,13 @@ const PlanSection = () => {
 							</p>
 
 							{/* dropdown items */}
-							<div className="relative inline-block text-left mb-6">
+							<div className="relative w-full inline-block text-left mb-6">
 								<button
 									type="button"
-									className="w-[323px] text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
+									className="w-full text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
 									onClick={toggleDropdown}
 								>
-									1 Member
+									Single
 									<Image
 										src={dropdownIconSrc}
 										alt="icon dropdown"
@@ -421,49 +422,22 @@ const PlanSection = () => {
 												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
-												1 Member
+												Single
 											</a>
 											<a
 												href="/"
 												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
-												2 Members
-											</a>
-											<a
-												href="/"
-												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-												role="menuitem"
-											>
-												3-5 Members
-											</a>
-											<a
-												href="/"
-												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-												role="menuitem"
-											>
-												6 Members
-											</a>
-											<a
-												href="/"
-												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-												role="menuitem"
-											>
-												7 Members
-											</a>
-											<a
-												href="/"
-												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-												role="menuitem"
-											>
-												8 Members
+												Family
 											</a>
 										</div>
 									</div>
 								)}
 							</div>
-							<button className="button-primary !w-[323px]">
-								Choose Premier Plus
+
+							<button className="bg-primary w-full h-[56px] rounded-[8px] text-[16px] font-primary font-medium text-[#FFFFFF] leading-[25.6px] text-center">
+								Choose Diamond Plus
 							</button>
 						</div>
 
@@ -606,13 +580,13 @@ const PlanSection = () => {
 							</p>
 
 							{/* dropdown items */}
-							<div className="relative inline-block text-left mb-6">
+							<div className="relative w-full inline-block text-left mb-6">
 								<button
 									type="button"
-									className="w-[323px] text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
+									className="w-full text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
 									onClick={toggleDropdown}
 								>
-									1 Member
+									Single
 									<Image
 										src={dropdownIconSrc}
 										alt="icon dropdown"
@@ -634,49 +608,22 @@ const PlanSection = () => {
 												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
-												1 Member
+												Single
 											</a>
 											<a
 												href="/"
 												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
-												2 Members
-											</a>
-											<a
-												href="/"
-												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-												role="menuitem"
-											>
-												3-5 Members
-											</a>
-											<a
-												href="/"
-												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-												role="menuitem"
-											>
-												6 Members
-											</a>
-											<a
-												href="/"
-												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-												role="menuitem"
-											>
-												7 Members
-											</a>
-											<a
-												href="/"
-												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-												role="menuitem"
-											>
-												8 Members
+												Family
 											</a>
 										</div>
 									</div>
 								)}
 							</div>
-							<button className="button-primary !w-[323px]">
-								Choose Premier Plus
+
+							<button className="bg-primary w-full h-[56px] rounded-[8px] text-[16px] font-primary font-medium text-[#FFFFFF] leading-[25.6px] text-center">
+								Choose Diamond 5 Plus
 							</button>
 						</div>
 					</div>

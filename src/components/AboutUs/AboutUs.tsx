@@ -22,7 +22,7 @@ const AboutUs = () => {
 							height={347.42}
 						/>
 						<Image
-							className="sm:hidden absolute right-[-45px] bottom-[-45px]"
+							className="sm:hidden absolute right-[-45px] md:right-0 bottom-[-45px]"
 							src="assets/images/pink-star.svg"
 							alt="pink branch"
 							width={181.17}

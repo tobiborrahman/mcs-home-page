@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -48,6 +49,10 @@
 		overflow: hidden;
 		overflow-y: scroll;
 		font-weight: 500;
+	}
+
+	.urbanist {
+		font-family: 'Urbanist', sans-serif;
 	}
 
 	h1,
@@ -215,6 +220,10 @@
 		box-shadow: 0 25px 25px -20px #12999f4d;
 	}
 
+	.button-primary:hover {
+		background: #12999f4d;
+	}
+
 	.button-secondary {
 		font-family: 'Poppins', sans-serif;
 		font-size: 16px;
@@ -239,8 +248,7 @@
 			font-size: 14px;
 			line-height: 14px;
 			padding: 10px 0px;
-			max-width: 150px;
-			height: 34px;
+			height: 45px;
 			border-radius: 6px;
 			-webkit-border-radius: 6px;
 			-moz-border-radius: 6px;
@@ -251,8 +259,8 @@
 			font-size: 14px;
 			line-height: 14px;
 			padding: 10px 12px;
-			max-width: 150px;
-			height: 34px;
+			width: 180px;
+			height: 45px;
 			border-radius: 6px;
 			-webkit-border-radius: 6px;
 			-moz-border-radius: 6px;

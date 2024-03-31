@@ -5,19 +5,19 @@ const Banner = () => {
 	return (
 		<div className="pt-[19px] mb-[95px] bg-[#FFFFFF]">
 			<div className="custom-container">
-				<div className="flex sm:flex-col items-center gap-[10px]">
-					<div className="sm:text-center items-center sm:py-10">
+				<div className="flex sm:flex-col md:flex-col items-center gap-[10px]">
+					<div className="sm:text-center md:text-center items-center sm:py-10 md:py-12">
 						<h6 className="text-primary">
 							Became part of a great community
 						</h6>
-						<h1 className="font-primary w-[590px] md:text-[35px] sm:w-full py-4">
+						<h1 className="font-primary w-[590px] md:text-[35px] md:leading-10 sm:w-full py-4">
 							Medical Cost Sharing Christian Healthcare
 						</h1>
-						<p className="w-[438px] sm:w-full pb-9">
+						<p className="w-[438px] sm:w-full md:w-full md:text-center pb-9">
 							MCS Medical Cost Sharing is a 501 C3 Non-Profit
 							Christian Healthcare Sharing Ministry.
 						</p>
-						<div className="flex items-center gap-8">
+						<div className="flex sm:flex-col items-center md:justify-center gap-8 sm:gap-4">
 							<button className="button-primary">
 								Check our Plans
 							</button>
@@ -41,7 +41,7 @@ const Banner = () => {
 							</div>
 						</div>
 					</div>
-					<div className="mr-[-70px] mb-[-57px] sm:mr-0">
+					<div className="mr-[-70px] md:mr-0 mb-[-57px] sm:mr-0">
 						<Image
 							src="/assets/images/banner-image.svg"
 							alt="banner image"

@@ -3,10 +3,10 @@ import React from 'react';
 
 const BenefitsSection = () => {
 	return (
-		<div className="bg-[#FFFFFF] pt-[438px] pb-[76.29px]">
+		<div className="bg-[#FFFFFF] pt-[438px] pb-[76.29px] sm:pb-0 md:pb-0">
 			<div className="custom-container">
-				<div className="flex items-center gap-[82px] relative py-6">
-					<div className="w-[610px]">
+				<div className="flex sm:flex-col md:flex-col sm:text-center md:text-center items-center gap-[82px] relative py-6">
+					<div className="w-[610px] sm:w-full">
 						<h6 className="text-primary">Our Premium Benefits</h6>
 						<h3 className="pt-5 pb-6">
 							Affordable Health Care for Christians
@@ -74,27 +74,27 @@ const BenefitsSection = () => {
 						</button>
 					</div>
 
-					<div className="">
+					<div className="sm:mt-[420px] md:mt-[720px]">
 						<Image
-							className="absolute top-[5px] left-[52.5%] z-[9999]"
+							className="sm:hidden md:hidden absolute top-[5px] left-[52.5%] z-[9999]"
 							src="assets/images/yellow-star.svg"
 							alt="yellow star"
 							width={130}
 							height={132}
 						/>
 						<Image
-							className="absolute bottom-0 right-[-150px] rotate-img py-[-20px]"
+							className="absolute bottom-0 right-[-150px] sm:right-0 md:right-0 rotate-img py-[-20px] sm:w-auto sm:h-auto md:w-auto md:h-auto"
 							src="assets/images/benefit-img.svg"
 							alt="benefit image"
 							width={629}
 							height={770}
 						/>
 						<Image
-							className="absolute bottom-[-70px] right-[-200px] overflow-hidden"
+							className="sm:hidden md:hidden absolute bottom-[-55px] right-[-151px] overflow-hidden"
 							src="assets/images/pink-design.svg"
 							alt="pink design"
-							width={194}
-							height={256}
+							width={154}
+							height={216}
 						/>
 					</div>
 				</div>

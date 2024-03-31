@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
 	return (
-		<header className="shadow-md sm:hidden bg-[#FFFFFF]">
+		<header className="shadow-md sm:hidden md:hidden bg-[#FFFFFF]">
 			<div className="max-w-[1440px] mx-auto px-[80px]">
 				<nav className="h-[100px] flex justify-between items-center ">
 					<div>
