@@ -202,16 +202,103 @@ const Navbar = () => {
 										Brokers
 									</a>
 								</li>
-								<li>
-									<a href="/" className="nav-link">
-										Company
-									</a>
-								</li>
-								<li>
-									<a href="/" className="nav-link">
-										For Members
-									</a>
-								</li>
+								<div className="nav-link">
+									<div className="relative w-full inline-block text-left">
+										<button
+											type="button"
+											className="w-full text-[16px] font-medium leading-[21px] font-primary  flex justify-between items-center"
+											onClick={toggleCompanyDropdown}
+										>
+											<span className="">Company</span>
+											<Image
+												className="ml-[9px]"
+												src={companyDropdownIconSrc}
+												alt="icon dropdown"
+												width={13.5}
+												height={7.5}
+											/>
+										</button>
+
+										{isCompanyDropdownOpen && (
+											<div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-[9999]">
+												<div
+													className="py-1"
+													role="menu"
+													aria-orientation="vertical"
+													aria-labelledby="options-menu"
+												>
+													<a
+														href="/"
+														className="block pl-3 py-2 text-[14px] font-primary font-normal leading-[21px] text-[#1F1E20] hover:bg-gray-100"
+														role="menuitem"
+													>
+														About Us
+													</a>
+													<a
+														href="/"
+														className="block pl-3 py-2 text-[14px] font-primary font-normal leading-[21px] text-[#1F1E20] hover:bg-gray-100"
+														role="menuitem"
+													>
+														Contact Us
+													</a>
+												</div>
+											</div>
+										)}
+									</div>
+								</div>
+								<div className="nav-link">
+									<div className="relative w-full inline-block text-left">
+										<button
+											type="button"
+											className="w-full text-[16px] font-medium leading-[21px] font-primary  flex justify-between items-center"
+											onClick={toggleMembersDropdown}
+										>
+											<span className="">
+												For Members
+											</span>
+											<Image
+												className="ml-[9px]"
+												src={membersDropdownIconSrc}
+												alt="icon dropdown"
+												width={13.5}
+												height={7.5}
+											/>
+										</button>
+
+										{isMembersDropdownOpen && (
+											<div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-[9999]">
+												<div
+													className="py-1"
+													role="menu"
+													aria-orientation="vertical"
+													aria-labelledby="options-menu"
+												>
+													<a
+														href="/"
+														className="block pl-3 py-2 text-[14px] font-primary font-normal leading-[21px] text-[#1F1E20] hover:bg-gray-100"
+														role="menuitem"
+													>
+														Members Portal
+													</a>
+													<a
+														href="/"
+														className="block pl-3 py-2 text-[14px] font-primary font-normal leading-[21px] text-[#1F1E20] hover:bg-gray-100"
+														role="menuitem"
+													>
+														Find a Provider
+													</a>
+													<a
+														href="/"
+														className="block px-3 py-2 text-[14px] font-primary font-normal leading-[21px] text-[#1F1E20] hover:bg-gray-100"
+														role="menuitem"
+													>
+														Support
+													</a>
+												</div>
+											</div>
+										)}
+									</div>
+								</div>
 								<li className="mt-5">
 									<a
 										href="#"
