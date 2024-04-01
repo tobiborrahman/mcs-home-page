@@ -4,17 +4,43 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 const PlanSection = () => {
-	const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+	const [isTooltip1Visible, setIsTooltip1Visible] = useState(false);
+	const [isTooltip2Visible, setIsTooltip2Visible] = useState(false);
+	const [isTooltip3Visible, setIsTooltip3Visible] = useState(false);
 
-	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-	const [dropdownIconSrc, setDropdownIconSrc] = useState(
+	const [isDropdown1Open, setIsDropdown1Open] = useState(false);
+	const [isDropdown2Open, setIsDropdown2Open] = useState(false);
+	const [isDropdown3Open, setIsDropdown3Open] = useState(false);
+	const [dropdown1IconSrc, setDropdown1IconSrc] = useState(
+		'assets/images/icons/icon-dropdown.svg'
+	);
+	const [dropdown2IconSrc, setDropdown2IconSrc] = useState(
+		'assets/images/icons/icon-dropdown.svg'
+	);
+	const [dropdown3IconSrc, setDropdown3IconSrc] = useState(
 		'assets/images/icons/icon-dropdown.svg'
 	);
 
-	const toggleDropdown = () => {
-		setIsDropdownOpen(!isDropdownOpen);
-		setDropdownIconSrc(
-			isDropdownOpen
+	const toggleDropdown1 = () => {
+		setIsDropdown1Open(!isDropdown1Open);
+		setDropdown1IconSrc(
+			isDropdown1Open
+				? 'assets/images/icons/icon-dropdown.svg'
+				: 'assets/images/icons/dropdown-up.svg'
+		);
+	};
+	const toggleDropdown2 = () => {
+		setIsDropdown2Open(!isDropdown2Open);
+		setDropdown2IconSrc(
+			isDropdown2Open
+				? 'assets/images/icons/icon-dropdown.svg'
+				: 'assets/images/icons/dropdown-up.svg'
+		);
+	};
+	const toggleDropdown3 = () => {
+		setIsDropdown3Open(!isDropdown3Open);
+		setDropdown3IconSrc(
+			isDropdown3Open
 				? 'assets/images/icons/icon-dropdown.svg'
 				: 'assets/images/icons/dropdown-up.svg'
 		);
@@ -82,14 +108,14 @@ const PlanSection = () => {
 										height={20}
 										className="cursor-pointer"
 										onMouseEnter={() =>
-											setIsTooltipVisible(true)
+											setIsTooltip1Visible(true)
 										}
 										onMouseLeave={() =>
-											setIsTooltipVisible(false)
+											setIsTooltip1Visible(false)
 										}
 									/>
-									{isTooltipVisible && (
-										<div className="absolute top-0 left-[30px]  bg-white p-5 rounded-[8px] w-[323px]">
+									{isTooltip1Visible && (
+										<div className="absolute top-0 left-[30px]  bg-[#EFEFEF] p-5 rounded-[8px] w-[323px] z-[9999]">
 											<h5 className="text-[14px] font-normal font-primary leading-[22.4px] text-[#1F1E20]">
 												The monthly contribution is the
 												amount that you will be charged
@@ -212,18 +238,18 @@ const PlanSection = () => {
 								<button
 									type="button"
 									className="w-full text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
-									onClick={toggleDropdown}
+									onClick={toggleDropdown1}
 								>
 									Single
 									<Image
-										src={dropdownIconSrc}
+										src={dropdown1IconSrc}
 										alt="icon dropdown"
 										width={12}
 										height={6}
 									/>
 								</button>
 
-								{isDropdownOpen && (
+								{isDropdown1Open && (
 									<div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
 										<div
 											className="py-1"
@@ -282,14 +308,14 @@ const PlanSection = () => {
 										height={20}
 										className="cursor-pointer"
 										onMouseEnter={() =>
-											setIsTooltipVisible(true)
+											setIsTooltip2Visible(true)
 										}
 										onMouseLeave={() =>
-											setIsTooltipVisible(false)
+											setIsTooltip2Visible(false)
 										}
 									/>
-									{isTooltipVisible && (
-										<div className="absolute top-0 left-[30px]  bg-white p-5 rounded-[8px] w-[323px]">
+									{isTooltip2Visible && (
+										<div className="absolute top-0 left-[30px]  bg-[#EFEFEF] p-5 rounded-[8px] w-[323px] z-[9999]">
 											<h5 className="text-[14px] font-normal font-primary leading-[22.4px] text-[#1F1E20]">
 												The monthly contribution is the
 												amount that you will be charged
@@ -398,18 +424,18 @@ const PlanSection = () => {
 								<button
 									type="button"
 									className="w-full text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
-									onClick={toggleDropdown}
+									onClick={toggleDropdown2}
 								>
-									Single
+									1 Member
 									<Image
-										src={dropdownIconSrc}
+										src={dropdown2IconSrc}
 										alt="icon dropdown"
 										width={12}
 										height={6}
 									/>
 								</button>
 
-								{isDropdownOpen && (
+								{isDropdown2Open && (
 									<div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
 										<div
 											className="py-1"
@@ -422,14 +448,42 @@ const PlanSection = () => {
 												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
-												Single
+												1 Member
 											</a>
 											<a
 												href="/"
 												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
-												Family
+												2 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												3-5 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												6 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												7 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												8 Members
 											</a>
 										</div>
 									</div>
@@ -468,14 +522,14 @@ const PlanSection = () => {
 										height={20}
 										className="cursor-pointer"
 										onMouseEnter={() =>
-											setIsTooltipVisible(true)
+											setIsTooltip3Visible(true)
 										}
 										onMouseLeave={() =>
-											setIsTooltipVisible(false)
+											setIsTooltip3Visible(false)
 										}
 									/>
-									{isTooltipVisible && (
-										<div className="absolute top-0 left-[30px]  bg-white p-5 rounded-[8px] w-[323px]">
+									{isTooltip3Visible && (
+										<div className="absolute top-0 left-[30px]  bg-[#EFEFEF] p-5 rounded-[8px] w-[323px] z-[9999]">
 											<h5 className="text-[14px] font-normal font-primary leading-[22.4px] text-[#1F1E20]">
 												The monthly contribution is the
 												amount that you will be charged
@@ -584,18 +638,18 @@ const PlanSection = () => {
 								<button
 									type="button"
 									className="w-full text-[14px] font-normal leading-[22.4px] font-primary text-[#1F1E20] flex justify-between items-center bg-[#F3F3F3] h-[48px] rounded-[8px] px-[20px]"
-									onClick={toggleDropdown}
+									onClick={toggleDropdown3}
 								>
-									Single
+									1 Member
 									<Image
-										src={dropdownIconSrc}
+										src={dropdown3IconSrc}
 										alt="icon dropdown"
 										width={12}
 										height={6}
 									/>
 								</button>
 
-								{isDropdownOpen && (
+								{isDropdown3Open && (
 									<div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
 										<div
 											className="py-1"
@@ -608,14 +662,42 @@ const PlanSection = () => {
 												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
-												Single
+												1 Member
 											</a>
 											<a
 												href="/"
 												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
 												role="menuitem"
 											>
-												Family
+												2 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												3-5 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												6 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												7 Members
+											</a>
+											<a
+												href="/"
+												className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+												role="menuitem"
+											>
+												8 Members
 											</a>
 										</div>
 									</div>

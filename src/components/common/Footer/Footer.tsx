@@ -1,7 +1,16 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
 
 const Footer = () => {
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	};
+
 	return (
 		<div className="bg-[#1F1E20] mt-[100px] sm:mt-[50px] md:mt-[70px]">
 			<div className="custom-container">
@@ -119,7 +128,10 @@ const Footer = () => {
 						Copyright © 2021 · MCS Medical Cost Sharing · All Rights
 						Reserved
 					</p>
-					<button className="bg-[#333333] px-5 py-[10px] sm:px-[10px] md:px-[10px] text-[#FFFFFF] rounded-[10px] flex items-center gap-2">
+					<button
+						onClick={scrollToTop}
+						className="bg-[#333333] px-5 py-[10px] sm:px-[10px] md:px-[10px] text-[#FFFFFF] rounded-[10px] flex items-center gap-2"
+					>
 						<Image
 							className="sm:w-[30px] sm:h-[30px]"
 							src="assets/images/icons/arrow-up.svg"
